@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { TamaguiProvider } from "tamagui";
 import config from "./tamagui.config";
-
-import Home from "./src";
+import Main from "./src";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -22,7 +21,7 @@ export default function App() {
 
   return (
     <TamaguiProvider config={config}>
-      <Home />
+      <Main />
     </TamaguiProvider>
   );
 }
