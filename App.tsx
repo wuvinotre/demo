@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
+import { Provider } from "react-redux";
 import { TamaguiProvider } from "tamagui";
 import config from "./tamagui.config";
+
 import Main from "./src";
+import { store } from "./src/store/store";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -21,7 +24,9 @@ export default function App() {
 
   return (
     <TamaguiProvider config={config}>
-      <Main />
+      <Provider store={store}>
+        <Main />
+      </Provider>
     </TamaguiProvider>
   );
 }
