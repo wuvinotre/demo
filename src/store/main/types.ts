@@ -1,4 +1,4 @@
-type Character = {
+export type Character = {
   _id: string;
   name: string;
   age: string;
@@ -8,7 +8,6 @@ type Character = {
   job: string;
   rank: string;
   status: string;
-  image: string;
 };
 
 type Status = "none" | "loading" | "success";
