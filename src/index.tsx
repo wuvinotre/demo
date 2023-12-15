@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
-import { FlatList } from "react-native";
-import { Spinner, XStack, Stack } from "tamagui";
+import React, { useEffect, ReactElement } from "react";
+import { ListRenderItemInfo } from "react-native";
+import { Spinner, YStack } from "tamagui";
+import Animated from "react-native-reanimated";
 
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { mainActions as actions } from "./store/main/slice";
+import { Character } from "./store/main/types";
 import { getAllCharacter, getLoading } from "./store/main/selector";
 import { CardItem } from "./component/card";
 
@@ -16,36 +18,28 @@ const Main = () => {
     dispatch(actions.getAllCharacter());
   }, [dispatch]);
 
-  if (loading === "loading") {
-    return (
-      <Stack f={1} ai={"center"} jc={"center"}>
-        <Spinner size="large" color="$orange10" />
-      </Stack>
-    );
-  }
+  const renderItem: (
+    info: ListRenderItemInfo<Character>
+  ) => ReactElement | null = ({ item }) => {
+    return <CardItem key={item._id} item={item} />;
+  };
 
   return (
-    <XStack f={1} ai={"center"}>
-      <FlatList
-        data={characters}
-        renderItem={({ item }) => (
-          <CardItem
-            key={item._id}
-            name={item.name}
-            age={item.age}
-            race={item.race}
-            gender={item.gender}
-            height={item.height}
-            job={item.job}
-            rank={item.rank}
-            status={item.status}
-            image={item.image}
-          />
-        )}
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}
-      />
-    </XStack>
+    <YStack f={1} ai={"center"} jc={"center"}>
+      {loading === "loading" ? (
+        <Spinner />
+      ) : (
+        <Animated.FlatList
+          data={characters}
+          renderItem={renderItem}
+          horizontal={true}
+          scrollEventThrottle={16}
+          pagingEnabled={true}
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item._id}
+        />
+      )}
+    </YStack>
   );
 };
 
