@@ -48,7 +48,7 @@ Mencione as ferramentas que você usou para criar seu projeto
 * [Tamagui](https://tamagui.dev/) - Kit para UI.
 * [Redux Toolkit](https://redux-toolkit.js.org/) - Gerenciamento de estado.
 * [Jest](https://jestjs.io/pt-BR/) - Framework de Testes
-* [Axios](https://axios-http.com/ptbr/) - cliente HTTP.
+* [Axios](https://axios-http.com/ptbr/) - Cliente HTTP.
 * [Expo](https://expo.dev/) - Ecossistema de ferramentas para o ajudar no desenvolvimento.
 * [Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Biblioteca para animações.
 
