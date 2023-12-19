@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { TamaguiProvider } from "tamagui";
 import config from "./tamagui.config";
 
-import Main from "./src";
+import Main from "./src/screens/main";
 import { store } from "./src/store/store";
 
 export default function App() {

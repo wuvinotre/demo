@@ -3,11 +3,11 @@ import { ListRenderItemInfo } from "react-native";
 import { Spinner, YStack } from "tamagui";
 import Animated from "react-native-reanimated";
 
-import { CardItem } from "./component";
-import { useAppDispatch, useAppSelector } from "./store/hooks";
-import { mainActions as actions } from "./store/main/slice";
-import { Character } from "./store/main/types";
-import { getAllCharacter, getLoading } from "./store/main/selector";
+import { CardItem } from "../../component";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { mainActions as actions } from "../../store/main/slice";
+import { Character } from "../../store/main/types";
+import { getAllCharacter, getLoading } from "../../store/main/selector";
 
 const Main = () => {
   const dispatch = useAppDispatch();
