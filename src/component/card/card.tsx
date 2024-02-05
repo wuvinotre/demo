@@ -33,14 +33,14 @@ export const CardItem = ({ item }: CardProps) => {
             {item.age} - {item.height} - {item.status}
           </Paragraph>
         </Card.Header>
-        {item.rank && (
+        {item.rank ? (
           <Card.Footer padded>
             <XStack flex={1} />
             <Button br="$10" variant="outlined" color={"$background"}>
               {item.rank}
             </Button>
           </Card.Footer>
-        )}
+        ) : null}
         <Card.Background>
           <LinearGradient
             width={350}
