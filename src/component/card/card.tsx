@@ -1,8 +1,9 @@
 import React from "react";
 import { useWindowDimensions } from "react-native";
-import { Card, H2, Paragraph, XStack, Button, Stack } from "tamagui";
+import { Card, H2, Paragraph, Button, Stack, Image } from "tamagui";
 import { LinearGradient } from "@tamagui/linear-gradient";
 import { CharacterProps } from "./type";
+import { useTheme } from "../../hooks";
 
 type CardProps = {
   item: CharacterProps;
@@ -10,6 +11,7 @@ type CardProps = {
 
 export const CardItem = ({ item }: CardProps) => {
   const { width: SCREEN_WIDTH } = useWindowDimensions();
+  const { bgColor, bgCard, textColor } = useTheme();
 
   return (
     <Stack f={1} ai={"center"} jc={"center"} w={SCREEN_WIDTH}>
@@ -26,29 +28,42 @@ export const CardItem = ({ item }: CardProps) => {
       >
         <Card.Header padded>
           <H2>{item.name}</H2>
-          <Paragraph theme="alt2">
-            {item.race} - {item.gender} - {item.job}
+          <Paragraph color={textColor}>
+            {item.race} - {item.gender}
           </Paragraph>
-          <Paragraph theme="alt2">
-            {item.age} - {item.height} - {item.status}
+          <Paragraph color={textColor}>
+            {item.job} - {item.status}
+          </Paragraph>
+          <Paragraph color={textColor}>
+            {item.age} - {item.height}
           </Paragraph>
         </Card.Header>
         {item.rank ? (
           <Card.Footer padded>
-            <XStack flex={1} />
-            <Button br="$10" variant="outlined" color={"$background"}>
+            <Button
+              br="$10"
+              variant="outlined"
+              color={textColor}
+              borderColor={textColor}
+            >
               {item.rank}
             </Button>
           </Card.Footer>
         ) : null}
         <Card.Background>
           <LinearGradient
+            position="absolute"
             width={350}
             height={300}
-            colors={["$background", "$color"]}
+            colors={[bgCard, bgColor]}
             borderRadius="$4"
-            start={[0, 0]}
-            end={[0, 2]}
+            start={[1, 0]}
+            end={[0, 0]}
+          />
+          <Image
+            source={{ width: 525, height: 730, uri: item.image }}
+            height={"100%"}
+            resizeMode="contain"
           />
         </Card.Background>
       </Card>
