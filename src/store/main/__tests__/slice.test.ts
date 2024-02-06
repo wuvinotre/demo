@@ -1,6 +1,6 @@
 import { State } from "../types";
 import reducer, { mainActions } from "../slice";
-import characters from "../../../services/mock.json";
+import characters from "src/services/mock.json";
 
 describe("Main Slice", () => {
   const initialState: State = {

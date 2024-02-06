@@ -4,12 +4,12 @@ import { StatusBar } from "expo-status-bar";
 import { Spinner, YStack } from "tamagui";
 import Animated from "react-native-reanimated";
 
-import { useTheme } from "../../hooks";
-import { CardItem } from "../../component";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { mainActions as actions } from "../../store/main/slice";
-import { Character } from "../../store/main/types";
-import { getAllCharacter, getLoading } from "../../store/main/selector";
+import { useTheme } from "src/hooks";
+import { CardItem } from "src/component";
+import { useAppDispatch, useAppSelector } from "src/store/hooks";
+import { mainActions as actions } from "src/store/main/slice";
+import { Character } from "src/store/main/types";
+import { getAllCharacter, getLoading } from "src/store/main/selector";
 
 const Main = () => {
   const { bgColor } = useTheme();

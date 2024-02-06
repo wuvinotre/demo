@@ -12,6 +12,16 @@ module.exports = function (api) {
           logTimings: true,
         },
       ],
+      [
+        "module-resolver",
+        {
+          root: ["./src"],
+          extensions: [".ts", ".tsx", ".json"],
+          alias: {
+            src: "./src",
+          },
+        },
+      ],
       "react-native-reanimated/plugin",
     ],
   };

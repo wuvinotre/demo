@@ -3,7 +3,7 @@ import { useWindowDimensions } from "react-native";
 import { Card, H2, Paragraph, Button, Stack, Image } from "tamagui";
 import { LinearGradient } from "@tamagui/linear-gradient";
 import { CharacterProps } from "./type";
-import { useTheme } from "../../hooks";
+import { useTheme } from "src/hooks";
 
 type CardProps = {
   item: CharacterProps;

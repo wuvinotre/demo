@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchAllCharacters } from "../../services/services";
+import { fetchAllCharacters } from "src/services/services";
 
 export const getAllCharacter = createAsyncThunk(
   "main/getAllCharacter",
