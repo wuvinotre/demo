@@ -8,6 +8,7 @@ export type Character = {
   job: string;
   rank: string;
   status: string;
+  image: string;
 };
 
 type Status = "none" | "loading" | "success";
