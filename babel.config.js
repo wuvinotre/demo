@@ -9,8 +9,8 @@ module.exports = function (api) {
         {
           components: ["tamagui"],
           config: "./tamagui.config.ts",
-          logTimings: true,
-        },
+          logTimings: true
+        }
       ],
       [
         "module-resolver",
@@ -18,11 +18,11 @@ module.exports = function (api) {
           root: ["./src"],
           extensions: [".ts", ".tsx", ".json"],
           alias: {
-            src: "./src",
-          },
-        },
+            src: "./src"
+          }
+        }
       ],
-      "react-native-reanimated/plugin",
-    ],
+      "react-native-reanimated/plugin"
+    ]
   };
 };

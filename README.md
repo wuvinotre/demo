@@ -44,13 +44,13 @@ yarn test || npm test
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-* [React-Native](https://reactnative.dev/) - Biblioteca para desenvolvimento de aplicativos para sistemas Android e iOS.
-* [Tamagui](https://tamagui.dev/) - Kit para UI.
-* [Redux Toolkit](https://redux-toolkit.js.org/) - Gerenciamento de estado.
-* [Jest](https://jestjs.io/pt-BR/) - Framework de Testes
-* [Axios](https://axios-http.com/ptbr/) - Cliente HTTP.
-* [Expo](https://expo.dev/) - Ecossistema de ferramentas para o ajudar no desenvolvimento.
-* [Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Biblioteca para animações.
+- [React-Native](https://reactnative.dev/) - Biblioteca para desenvolvimento de aplicativos para sistemas Android e iOS.
+- [Tamagui](https://tamagui.dev/) - Kit para UI.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - Gerenciamento de estado.
+- [Jest](https://jestjs.io/pt-BR/) - Framework de Testes
+- [Axios](https://axios-http.com/ptbr/) - Cliente HTTP.
+- [Expo](https://expo.dev/) - Ecossistema de ferramentas para o ajudar no desenvolvimento.
+- [Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Biblioteca para animações.
 
 ## 📄 Licença
 
@@ -58,5 +58,5 @@ Este projeto está sob a licença MIT license - veja o arquivo [LICENSE.md](http
 
 ## 🎁 Expressões de gratidão
 
-* Agradeço por dedicar seu tempo e atenção até este ponto. Obrigado por ler até aqui. 🫂;
-* Se possível, contem a outras pessoas sobre este projeto 📢;
+- Agradeço por dedicar seu tempo e atenção até este ponto. Obrigado por ler até aqui. 🫂;
+- Se possível, contem a outras pessoas sobre este projeto 📢;

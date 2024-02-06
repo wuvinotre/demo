@@ -21,14 +21,22 @@ const Main = () => {
     dispatch(actions.getAllCharacter());
   }, [dispatch]);
 
-  const renderItem: (
-    info: ListRenderItemInfo<Character>,
-  ) => ReactElement | null = ({ item }) => {
-    return <CardItem key={item._id} item={item} />;
+  const renderItem: (info: ListRenderItemInfo<Character>) => ReactElement | null = ({ item }) => {
+    return (
+      <CardItem
+        key={item._id}
+        item={item}
+      />
+    );
   };
 
   return (
-    <YStack f={1} ai={"center"} jc={"center"} bg={bgColor}>
+    <YStack
+      f={1}
+      ai={"center"}
+      jc={"center"}
+      bg={bgColor}
+    >
       <StatusBar />
       {loading === "loading" ? (
         <Spinner />

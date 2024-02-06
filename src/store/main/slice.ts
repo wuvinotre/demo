@@ -3,7 +3,7 @@ import { State } from "./types";
 import { getAllCharacter } from "./thunk";
 
 const initialState: State = {
-  loading: "none",
+  loading: "none"
 };
 
 export const slice = createSlice({
@@ -18,12 +18,12 @@ export const slice = createSlice({
       state.character = action.payload;
       state.loading = "success";
     });
-  },
+  }
 });
 
 export const mainActions = {
   ...slice.actions,
-  getAllCharacter,
+  getAllCharacter
 };
 
 export default slice.reducer;

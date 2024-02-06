@@ -14,7 +14,12 @@ export const CardItem = ({ item }: CardProps) => {
   const { bgColor, bgCard, textColor } = useTheme();
 
   return (
-    <Stack f={1} ai={"center"} jc={"center"} w={SCREEN_WIDTH}>
+    <Stack
+      f={1}
+      ai={"center"}
+      jc={"center"}
+      w={SCREEN_WIDTH}
+    >
       <Card
         elevate
         size="$4"

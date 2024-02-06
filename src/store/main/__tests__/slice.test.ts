@@ -4,7 +4,7 @@ import characters from "src/services/mock.json";
 
 describe("Main Slice", () => {
   const initialState: State = {
-    loading: "none",
+    loading: "none"
   };
 
   it("should return the initial state", () => {
@@ -14,18 +14,12 @@ describe("Main Slice", () => {
 
   describe("getAllCharacter", () => {
     it("should handle getAllCharacter.pending", () => {
-      const state = reducer(
-        initialState,
-        mainActions.getAllCharacter.pending("")
-      );
+      const state = reducer(initialState, mainActions.getAllCharacter.pending(""));
       expect(state.loading).toEqual("loading");
     });
 
     it("should handle empty getAllCharacter.fulfilled ", () => {
-      const state = reducer(
-        initialState,
-        mainActions.getAllCharacter.fulfilled(characters, "")
-      );
+      const state = reducer(initialState, mainActions.getAllCharacter.fulfilled(characters, ""));
       expect(state.loading).toEqual("success");
       expect(state.character).toEqual(characters);
     });
