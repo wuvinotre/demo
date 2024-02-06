@@ -14,12 +14,7 @@ export const CardItem = ({ item }: CardProps) => {
   const { bgColor, bgCard, textColor } = useTheme();
 
   return (
-    <Stack
-      f={1}
-      ai={"center"}
-      jc={"center"}
-      w={SCREEN_WIDTH}
-    >
+    <Stack f={1} ai={"center"} jc={"center"} w={SCREEN_WIDTH}>
       <Card
         elevate
         size="$4"
@@ -45,12 +40,7 @@ export const CardItem = ({ item }: CardProps) => {
         </Card.Header>
         {item.rank ? (
           <Card.Footer padded>
-            <Button
-              br="$10"
-              variant="outlined"
-              color={textColor}
-              borderColor={textColor}
-            >
+            <Button br="$10" variant="outlined" color={textColor} borderColor={textColor}>
               {item.rank}
             </Button>
           </Card.Footer>
@@ -65,11 +55,7 @@ export const CardItem = ({ item }: CardProps) => {
             start={[1, 0]}
             end={[0, 0]}
           />
-          <Image
-            source={{ width: 525, height: 730, uri: item.image }}
-            height={"100%"}
-            resizeMode="contain"
-          />
+          <Image source={{ width: 525, height: 730, uri: item.image }} height={"100%"} resizeMode="contain" />
         </Card.Background>
       </Card>
     </Stack>
