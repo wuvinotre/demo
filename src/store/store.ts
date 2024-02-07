@@ -3,8 +3,8 @@ import main from "./main/slice";
 
 export const store = configureStore({
   reducer: {
-    main: main,
-  },
+    main: main
+  }
 });
 
 export type RootState = ReturnType<typeof store.getState>;

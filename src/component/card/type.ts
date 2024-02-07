@@ -7,4 +7,5 @@ export type CharacterProps = {
   job: string;
   rank: string;
   status: string;
+  image: string;
 };
