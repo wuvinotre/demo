@@ -43,7 +43,7 @@ yarn test || npm test
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
-
+ 
 - [React-Native](https://reactnative.dev/) - Biblioteca para desenvolvimento de aplicativos para sistemas Android e iOS.
 - [Tamagui](https://tamagui.dev/) - Kit para UI.
 - [Redux Toolkit](https://redux-toolkit.js.org/) - Gerenciamento de estado.
@@ -60,3 +60,4 @@ Este projeto está sob a licença MIT license - veja o arquivo [LICENSE.md](http
 
 - Agradeço por dedicar seu tempo e atenção até este ponto. Obrigado por ler até aqui. 🫂;
 - Se possível, contem a outras pessoas sobre este projeto 📢;
+ 
