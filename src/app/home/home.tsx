@@ -11,7 +11,7 @@ import { mainActions as actions } from "src/store/main/slice";
 import { Character } from "src/store/main/types";
 import { getAllCharacter, getLoading } from "src/store/main/selector";
 
-const Main = () => {
+const Home = () => {
   const { bgColor } = useTheme();
   const dispatch = useAppDispatch();
   const characters = useAppSelector(getAllCharacter);
@@ -45,4 +45,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

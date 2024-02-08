@@ -2,9 +2,9 @@ import React from "react";
 import { useFonts } from "expo-font";
 import { Provider } from "react-redux";
 import { TamaguiProvider } from "tamagui";
-import config from "./tamagui.config";
+import config from "../../tamagui.config";
 
-import Home from "src/app/home";
+import Home from "./home";
 import { store } from "src/store/store";
 
 export default function App() {
